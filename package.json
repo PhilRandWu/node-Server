@@ -1,0 +1,13 @@
+{
+	"script": {
+		"start": "nodemon -x npm run server",
+		"server": "node index"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.23",
+		"nodemon": "^2.0.15"
+	},
+	"dependencies": {
+		"express": "^4.17.3"
+	}
+}
