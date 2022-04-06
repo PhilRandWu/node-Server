@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 20:55:16
- * @LastEditTime: 2022-04-06 20:59:39
+ * @LastEditTime: 2022-04-06 21:03:07
  * @LastEditors: PhilRandWu
  */
 const sequelize = require('../db');
@@ -16,7 +16,7 @@ const Student = sequelize.define('Student',
             allowNull: false
         },
         sex: {
-            type: DataTypes.STRING,
+            type: DataTypes.BOOLEAN,
             allowNull: false
         },
         birthday: {

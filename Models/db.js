@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 14:56:17
- * @LastEditTime: 2022-04-06 20:40:06
+ * @LastEditTime: 2022-04-06 21:29:01
  * @LastEditors: PhilRandWu
  */
 const { Sequelize } = require('sequelize');
@@ -12,7 +12,7 @@ const { Sequelize } = require('sequelize');
 //     sqlLogger.debug('one debug service');
 // }, 100)
 
-const sequelize = new Sequelize('schoolmanage', 'root', '123456', {
+const sequelize = new Sequelize('schoolmanage', 'root', '123123', {
     host: 'localhost',
     dialect: 'mysql'
 });
