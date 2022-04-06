@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 14:56:17
- * @LastEditTime: 2022-04-06 17:49:11
+ * @LastEditTime: 2022-04-06 20:40:06
  * @LastEditors: PhilRandWu
  */
 const { Sequelize } = require('sequelize');
@@ -17,7 +17,11 @@ const sequelize = new Sequelize('schoolmanage', 'root', '123456', {
     dialect: 'mysql'
 });
 
-
+/**
+ * @description: 测试数据库连接
+ * @param {*}
+ * @return {*}
+ */
 async function test() {
     try {
         await sequelize.authenticate();
@@ -27,4 +31,4 @@ async function test() {
     }
 }
 
-test();
+module.exports = sequelize;
