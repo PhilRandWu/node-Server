@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:28:11
- * @LastEditTime: 2022-04-02 22:33:18
+ * @LastEditTime: 2022-04-06 14:54:05
  * @LastEditors: PhilRandWu
  */
 const express = require('express');
@@ -15,6 +15,9 @@ const app = express();
 const staticRoot = path.resolve(__dirname, '../Public');
 app.use(express.static(staticRoot));
 
+app.get('/', (req, res) => {
+    res.send('hello!');
+})
 
 const port = 5005;
 app.listen(port, () => {

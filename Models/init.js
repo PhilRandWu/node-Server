@@ -2,8 +2,8 @@
  * @Description: 
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
- * @Date: 2022-04-02 22:28:16
- * @LastEditTime: 2022-04-06 14:36:14
+ * @Date: 2022-04-06 15:09:19
+ * @LastEditTime: 2022-04-06 15:12:44
  * @LastEditors: PhilRandWu
  */
-require('./index');
+require('./db');
