@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 20:51:07
- * @LastEditTime: 2022-04-06 20:54:53
+ * @LastEditTime: 2022-04-08 21:23:21
  * @LastEditors: PhilRandWu
  */
 const { DataTypes } = require('sequelize');
@@ -19,8 +19,8 @@ const Class = sequelize.define('Class', {
         allowNull: false
     }
 }, {
-    createdAt: false,
-    updatedAt: false,
+    createdAt: true,
+    updatedAt: true,
     paranoid: true
 });
 
