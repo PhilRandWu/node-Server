@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-07 17:58:21
- * @LastEditTime: 2022-04-07 18:09:03
+ * @LastEditTime: 2022-04-08 21:38:03
  * @LastEditors: PhilRandWu
  */
 const Mock = require('mockjs');
@@ -20,6 +20,5 @@ const result = Mock.mock({
         }
     ]
 }).data;
-
 const Student = require('../Models/Instance/student');
 Student.bulkCreate(result);

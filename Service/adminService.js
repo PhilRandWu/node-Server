@@ -3,12 +3,12 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 21:39:02
- * @LastEditTime: 2022-04-07 17:38:20
+ * @LastEditTime: 2022-04-08 21:47:51
  * @LastEditors: PhilRandWu
  */
 // 管理员初始化
 // 判断数据库中是否有管理员，如果没有，自动添加一个默认管理员
-const Admin = require("../models/Instance/admin");
+const Admin = require("../Models/Instance/admin");
 exports.addAdmin = async function (adminObj) {
   // 应该判断adminObj的各种属性是否合理，以及账号是否已存在
   const ins = await Admin.create(adminObj);

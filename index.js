@@ -3,20 +3,21 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:12:26
- * @LastEditTime: 2022-04-08 21:06:49
+ * @LastEditTime: 2022-04-08 21:49:50
  * @LastEditors: PhilRandWu
  */
 require('./Router/init');
-require('./Models/init');
-// require('./Mock/class');
-// require('./Mock/student');
+// require('./Models/init');
 
-// const adminSer = require('./Service/adminService');
+require('./Mock/class');
+require('./Mock/student');
 
-// adminSer.addAdmin({
-//     account: 'admin',
-//     password: '123123'
-// }).then(res => console.log(res));
+const adminSer = require('./Service/adminService');
+
+adminSer.addAdmin({
+    account: 'admin',
+    password: '123123'
+}).then(res => console.log(res));
 
 // adminSer.deleteAdmin(1).then(res => console.log(res));
 

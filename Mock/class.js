@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-07 17:48:56
- * @LastEditTime: 2022-04-08 21:17:30
+ * @LastEditTime: 2022-04-08 21:44:05
  * @LastEditors: PhilRandWu
  */
 const Mock = require('mockjs');
@@ -18,5 +18,6 @@ const result = Mock.mock({
     ]
 }).data;
 
-const Class = require('../Models/Instance/classGrade');
-Class.bulkCreate(result);
+const ClassGrade = require('../Models/Instance/classGrade');
+
+ClassGrade.bulkCreate(result);
