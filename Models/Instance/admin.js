@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 20:42:47
- * @LastEditTime: 2022-04-08 21:21:09
+ * @LastEditTime: 2022-04-09 16:00:20
  * @LastEditors: PhilRandWu
  */
 const { DataTypes } = require('sequelize');

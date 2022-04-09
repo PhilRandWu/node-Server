@@ -3,14 +3,16 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 21:39:02
- * @LastEditTime: 2022-04-09 15:16:42
+ * @LastEditTime: 2022-04-09 16:02:42
  * @LastEditors: PhilRandWu
  */
 // 管理员初始化
 // 判断数据库中是否有管理员，如果没有，自动添加一个默认管理员
+const md5 = require('md5');
 const Admin = require("../Models/Instance/admin");
 exports.addAdmin = async function (adminObj) {
   // 应该判断adminObj的各种属性是否合理，以及账号是否已存在
+  adminObj.password = md5(adminObj.password);
   const ins = await Admin.create(adminObj);
   return ins.toJSON();
 };
@@ -42,6 +44,7 @@ exports.updateAdmin = async function (id, adminObj) {
   // ins.save();
 
   // 方式2
+  adminObj.password = md5(adminObj.password);
   const result = await Admin.update(adminObj, {
     where: {
       id,
@@ -50,29 +53,29 @@ exports.updateAdmin = async function (id, adminObj) {
   return result;
 };
 
-exports.login = async function(account, password) {
+exports.login = async function (account, password) {
   const result = await Admin.findOne({
     where: {
       account,
-      password
+      password: md5(password)
     }
   });
-  if(result && result.account === account && result.password === password) {
+  if (result && result.account === account && result.password === md5(password)) {
     return result.toJSON();
   }
   return null;
 }
 
-exports.getByID = async function(id) {
+exports.getByID = async function (id) {
   const result = await Admin.findByPk(id);
-  if(result) {
+  if (result) {
     return result.toJSON();
   }
   return null;
 }
 
 
-exports.getAllAdmin = async function() {
+exports.getAllAdmin = async function () {
   const result = await Admin.findAll();
   return JSON.parse(JSON.stringify(result));
 }
