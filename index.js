@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:12:26
- * @LastEditTime: 2022-04-08 21:49:50
+ * @LastEditTime: 2022-04-09 08:57:15
  * @LastEditors: PhilRandWu
  */
 require('./Router/init');
@@ -11,13 +11,14 @@ require('./Router/init');
 
 require('./Mock/class');
 require('./Mock/student');
+require('./Spider/fetchBook');
 
-const adminSer = require('./Service/adminService');
+// const adminSer = require('./Service/adminService');
 
-adminSer.addAdmin({
-    account: 'admin',
-    password: '123123'
-}).then(res => console.log(res));
+// adminSer.addAdmin({
+//     account: 'admin',
+//     password: '123123'
+// }).then(res => console.log(res));
 
 // adminSer.deleteAdmin(1).then(res => console.log(res));
 
