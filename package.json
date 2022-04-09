@@ -13,7 +13,9 @@
 	"dependencies": {
 		"express": "^4.17.3",
 		"md5": "^2.3.0",
+		"moment": "^2.29.2",
 		"mysql2": "^2.3.3",
-		"sequelize": "^6.18.0"
+		"sequelize": "^6.18.0",
+		"validate.js": "^0.13.1"
 	}
 }

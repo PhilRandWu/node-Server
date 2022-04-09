@@ -3,11 +3,11 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-07 17:28:32
- * @LastEditTime: 2022-04-09 15:34:52
+ * @LastEditTime: 2022-04-09 17:36:14
  * @LastEditors: PhilRandWu
  */
 
-const { Json } = require('sequelize/types/utils');
+const { Op } = require("sequelize");
 const Class = require('../Models/Instance/classGrade');
 
 exports.addClass = async function (obj) {

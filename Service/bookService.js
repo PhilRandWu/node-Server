@@ -3,9 +3,10 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 21:41:30
- * @LastEditTime: 2022-04-09 15:27:52
+ * @LastEditTime: 2022-04-09 17:23:10
  * @LastEditors: PhilRandWu
  */
+const { Op } = require("sequelize");
 const Book = require('../Models/Instance/book');
 
 exports.addBook = async function (bookObj) {

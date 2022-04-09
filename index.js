@@ -3,15 +3,10 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:12:26
- * @LastEditTime: 2022-04-09 16:04:31
+ * @LastEditTime: 2022-04-09 19:11:08
  * @LastEditors: PhilRandWu
  */
-require('./Router/init');
-// require('./Models/init');
-
-// require('./Mock/class');
-// require('./Mock/student');
-// require('./Spider/fetchBook');
+require('./init');
 
 // const adminSer = require('./Service/adminService');
 
@@ -28,3 +23,18 @@ require('./Router/init');
 //     account: 'root',
 //     password: 'root'
 // })
+
+const studentSer = require('./Service/studentService');
+
+studentSer.addStudent({
+    name: "adfd",
+    birthday: "2010-3-5",
+    sex: true,
+    mobile: "15454545444",
+    ClassId: 3,
+    deletedAt: "2010-1-1",
+    a: 3,
+    b: 4,
+}).catch((err) => {
+    console.log(err);
+});
