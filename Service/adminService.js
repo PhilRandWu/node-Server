@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 21:39:02
- * @LastEditTime: 2022-04-08 21:47:51
+ * @LastEditTime: 2022-04-09 15:16:42
  * @LastEditors: PhilRandWu
  */
 // 管理员初始化
@@ -49,3 +49,30 @@ exports.updateAdmin = async function (id, adminObj) {
   });
   return result;
 };
+
+exports.login = async function(account, password) {
+  const result = await Admin.findOne({
+    where: {
+      account,
+      password
+    }
+  });
+  if(result && result.account === account && result.password === password) {
+    return result.toJSON();
+  }
+  return null;
+}
+
+exports.getByID = async function(id) {
+  const result = await Admin.findByPk(id);
+  if(result) {
+    return result.toJSON();
+  }
+  return null;
+}
+
+
+exports.getAllAdmin = async function() {
+  const result = await Admin.findAll();
+  return JSON.parse(JSON.stringify(result));
+}
