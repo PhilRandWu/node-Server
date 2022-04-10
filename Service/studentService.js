@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-07 17:22:12
- * @LastEditTime: 2022-04-09 18:48:56
+ * @LastEditTime: 2022-04-09 19:54:06
  * @LastEditors: PhilRandWu
  */
 
@@ -57,7 +57,7 @@ const rule = {
 };
 
 exports.addStudent = async function (obj) {
-  obj = pick(obj, "name", "birthday", "sex", "phone", "classID");
+  obj = pick(obj, "name", "birthday", "sex", "phone", "ClassId",'age');
   console.log(obj)
   validate.validators.classExits = async function (value) {
     const c = await Class.findByPk(value);

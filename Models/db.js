@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 14:56:17
- * @LastEditTime: 2022-04-06 21:29:01
+ * @LastEditTime: 2022-04-09 19:45:06
  * @LastEditors: PhilRandWu
  */
 const { Sequelize } = require('sequelize');
@@ -14,7 +14,8 @@ const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize('schoolmanage', 'root', '123123', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
 });
 
 /**

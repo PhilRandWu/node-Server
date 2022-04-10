@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:12:26
- * @LastEditTime: 2022-04-09 19:11:08
+ * @LastEditTime: 2022-04-09 19:47:38
  * @LastEditors: PhilRandWu
  */
 require('./init');
@@ -30,7 +30,7 @@ studentSer.addStudent({
     name: "adfd",
     birthday: "2010-3-5",
     sex: true,
-    mobile: "15454545444",
+    phone: "15454545444",
     ClassId: 3,
     deletedAt: "2010-1-1",
     a: 3,
