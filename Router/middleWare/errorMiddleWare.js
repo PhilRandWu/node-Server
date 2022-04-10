@@ -4,7 +4,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-10 13:39:35
- * @LastEditTime: 2022-04-10 13:43:12
+ * @LastEditTime: 2022-04-10 14:01:17
  * @LastEditors: PhilRandWu
  */
 module.exports = (err,req,res,next) => {
@@ -13,7 +13,7 @@ module.exports = (err,req,res,next) => {
             code: 500,
             msg: err instanceof Error ? err.message : err
         }
-        res.status(500),send(errObj);
+        res.status(500).send(errObj);
         return;
     }
     next();
