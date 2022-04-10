@@ -3,10 +3,11 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-06 14:56:17
- * @LastEditTime: 2022-04-09 19:45:06
+ * @LastEditTime: 2022-04-10 13:34:12
  * @LastEditors: PhilRandWu
  */
 const { Sequelize } = require('sequelize');
+const { sqlLogger } = require('../logger');
 
 // setInterval(() => {
 //     sqlLogger.debug('one debug service');
@@ -15,7 +16,9 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('schoolmanage', 'root', '123123', {
     host: 'localhost',
     dialect: 'mysql',
-    logging: false
+    logging: msg => {
+        sqlLogger.debug(msg);
+    }
 });
 
 /**
