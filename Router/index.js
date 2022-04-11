@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:28:11
- * @LastEditTime: 2022-04-11 13:02:58
+ * @LastEditTime: 2022-04-11 21:40:43
  * @LastEditors: PhilRandWu
  */
 const express = require('express');
@@ -14,6 +14,9 @@ const app = express();
 // 静态资源
 const staticRoot = path.resolve(__dirname, '../Public');
 app.use(express.static(staticRoot));
+
+// cors 跨域
+app.use(require('./middleWare/corsMiddleWare'));
 
 // 加入cookie-parser 中间件
 // 加入之后，会在req对象中注入cookies属性，用于获取所有请求传递过来的cookie
