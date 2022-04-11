@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-07 17:22:12
- * @LastEditTime: 2022-04-09 19:54:06
+ * @LastEditTime: 2022-04-10 14:34:20
  * @LastEditors: PhilRandWu
  */
 
@@ -119,7 +119,7 @@ exports.getStudents = async function (
   }
 
   const result = await Student.findAndCountAll({
-    attributes: ["id", "name", "sex", "birthdady"],
+    attributes: ["id", "name", "sex", "birthday",'age'],
     where,
     include: [Class],
     offset: (page - 1) * limit,

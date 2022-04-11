@@ -3,7 +3,7 @@
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-02 22:12:26
- * @LastEditTime: 2022-04-09 19:47:38
+ * @LastEditTime: 2022-04-11 12:03:58
  * @LastEditors: PhilRandWu
  */
 require('./init');
@@ -24,17 +24,17 @@ require('./init');
 //     password: 'root'
 // })
 
-const studentSer = require('./Service/studentService');
+// const studentSer = require('./Service/studentService');
 
-studentSer.addStudent({
-    name: "adfd",
-    birthday: "2010-3-5",
-    sex: true,
-    phone: "15454545444",
-    ClassId: 3,
-    deletedAt: "2010-1-1",
-    a: 3,
-    b: 4,
-}).catch((err) => {
-    console.log(err);
-});
+// studentSer.addStudent({
+//     name: "adfd",
+//     birthday: "2010-3-5",
+//     sex: true,
+//     phone: "15454545444",
+//     ClassId: 3,
+//     deletedAt: "2010-1-1",
+//     a: 3,
+//     b: 4,
+// }).catch((err) => {
+//     console.log(err);
+// });
