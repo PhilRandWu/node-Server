@@ -1,14 +1,12 @@
 const express = require("express");
 const { asyncHandle } = require("../middleWare/getResultMiddleWare");
 const studentSrv = require('../../Service/studentService');
-const { query } = require("express");
-
 /*
  * @Description: 
  * @Author: PhilRandWu
  * @Github: https://github/PhilRandWu
  * @Date: 2022-04-10 14:12:51
- * @LastEditTime: 2022-04-10 14:36:58
+ * @LastEditTime: 2022-04-11 12:36:26
  * @LastEditors: PhilRandWu
  */
 const router = express.Router();
